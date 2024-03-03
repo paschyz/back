@@ -1,11 +1,10 @@
-FROM node:18-alpine
+FROM node:16-bullseye
 
-WORKDIR /
+WORKDIR /app
 
+COPY package*.json ./
 
-COPY . .
-RUN ls -la
-RUN npm ci
+RUN npm install
 
 COPY . .
 

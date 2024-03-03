@@ -1,6 +1,7 @@
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 dotenv.config()
+
 const mongoURL = `mongodb+srv://admin:Respons11@todolist.lbok7sy.mongodb.net/todolist`;
 mongoose.connect(mongoURL, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
